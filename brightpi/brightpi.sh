@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# HT -https://www.pi-supply.com/bright-pi-v1-0-assembly-instructions/ 
+
+#To turn only all white LEDs on:
+sudo i2cset -y 1 0x70 0x00 0x5a
+
+#To turn only all IR LEDs on:
+sudo i2cset -y 1 0x70 0x00 0xa5
+
+#To turn all LEDs on:
+sudo i2cset -y 1 0x70 0x00 0xff
+
+#Then you need to turn the gain up to full using:
+sudo i2cset -y 1 0x70 0x09 0x0f
+
+#Then you need to turn brightness of individual LEDs up. For white:
+sudo i2cset -y 1 0x70 0x02 0x32
+sudo i2cset -y 1 0x70 0x04 0x32
+sudo i2cset -y 1 0x70 0x05 0x32
+sudo i2cset -y 1 0x70 0x07 0x32
+
+#For IR:
+sudo i2cset -y 1 0x70 0x01 0x32
+sudo i2cset -y 1 0x70 0x03 0x32
+sudo i2cset -y 1 0x70 0x06 0x32
+sudo i2cset -y 1 0x70 0x08 0x32
+
+#If you need to turn all the LEDs off:
+sudo i2cset -y 1 0x70 0x00 0x00
