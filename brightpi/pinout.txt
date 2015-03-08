@@ -1,0 +1,8 @@
+[ ] [g] --> [   ] [5v ] --> [      ] [green ]
+[b] [ ] --> [SDA] [   ] --> [blue  ] [      ]
+[y] [o] --> [SCL] [GND] --> [yellow] [orange]
+
+g - green - 5v
+b - blue - (GP2) SDA
+y - yellow - (GP3) SCL
+o - orange - GND
